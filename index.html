@@ -1,5 +1,15 @@
 <script>
-  const SITE_ONE = 'https://google.com';
-  const SITE_TWO = 'https://youtube.com';
-  window.location.href = Math.random() > 0.5 ? SITE_ONE : SITE_TWO;
+  const CZECH_1 = 'https://google.cz';
+  const CZECH_2 = 'https://youtube.cz';
+  const GERMAN_1 = 'https://google.de';
+  const GERMAN_2 = 'https://youtube.de';
+  switch (location.search) {
+    // napr. ceskej link bude tumovaj.github.io?lang=cz
+    case "?lang=cz":
+      window.location.href = Math.random() > 0.5 ? CZECH_1 : CZECH_2;
+      break;
+    
+    case "?lang=de":
+      window.location.href = Math.random() > 0.5 ? GERMAN_1 : GERMAN_1;
+      break;
 </script>
